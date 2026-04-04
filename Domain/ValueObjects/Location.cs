@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Domain.ValueObjects;
+
+public record Location
+{
+    public string City { get; } = default!;
+    public string Street { get; } = default!;
+
+    public Location(string city, string street)
+    {
+        this.City = city;
+        this.Street = street;
+    }
+
+    public static Location Of(string city, string street)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(city);
+        ArgumentException.ThrowIfNullOrWhiteSpace(street);
+
+        return new Location(city, street);
+    }
+}
