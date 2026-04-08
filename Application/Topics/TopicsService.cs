@@ -11,12 +11,12 @@ public class TopicsService(IApplicationDbContext dbContext, ILogger<TopicsServic
         throw new NotImplementedException();
     }
 
-    public Task DeleteTopicAsync(TopicId id)
+    public Task DeleteTopicAsync(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public async Task<Topic> GetTopicAsync(Guid id)
+    public Task<Topic> GetTopicAsync(Guid id)
     {
         throw new NotImplementedException();
     }
@@ -30,7 +30,7 @@ public class TopicsService(IApplicationDbContext dbContext, ILogger<TopicsServic
         return topics;
     }
 
-    public Task<Topic> UpdateTopicAsync(TopicId id, Topic topicRequestDto)
+    public Task<Topic> UpdateTopicAsync(Guid id, Topic topicRequestDto)
     {
         throw new NotImplementedException();
     }
