@@ -5,6 +5,6 @@ public record TopicResponseDto(
     string Title,
     string Summary,
     string TopicType,
-    DateTime EventStart,
+    DateTime? EventStart,
     LocationDto Location
 );
